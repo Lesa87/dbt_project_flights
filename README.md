@@ -1,4 +1,4 @@
-Welcome to dbt project flights!
+Welcome to dbt project flights! This is my first dbt project!
 
 ### Using the starter project
 
