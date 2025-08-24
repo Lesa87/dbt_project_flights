@@ -22,14 +22,8 @@ sources:
               description: Название аэропорта
             - name: city
               description: Город, в котором расположен аэропорт
-            - name: state
-              description: Штат, в котором расположен аэропорт
-            - name: country
-              description: Страна, в которой расположен аэропорт
-            - name: latitude
-              description: Географическая широта аэропорта (десятичный формат)
-            - name: longitude
-              description: Географическая долгота аэропорта (десятичный формат)
+            - name: coordinates
+              description: Географическая долгота и широта аэропорта (десятичный формат)
             - name: timezone
               description: Часовой пояс аэропорта (относительно UTC)
         - name: seats
@@ -39,6 +33,39 @@ sources:
               description: Код модели самолета
             - name: seats
               description: Количество мест в самолете
-        
+            - name: fare_conditions
+              description: Класс обслуживания (F = первый класс, C = бизнес-класс, Y = эконом-класс)
+        - name: flights
+          description: Рейсы
+          columns:
+            - name: flight_id
+              description: Уникальный идентификатор рейса
+            - name: flight_no
+              description: Номер рейса
+            - name: scheduled_departure
+              description: Запланированное время вылета (местное время)
+            - name: scheduled_arrival
+              description: Запланированное время прилета (местное время)
+            - name: departure_airport
+              description: аэропорт вылета
+            - name: arrival_airport
+              description: аэропорта прилета
+            - name: status
+              description: Статус рейса (A = в пути, C = отменен, D = отклонен, L = загружен, S = запланирован)
+            - name: aircraft_code
+              description: Код модели самолета  
+            - name: actual_departure
+              description: Фактическое время вылета (местное время)
+            - name: arrival_arrival   
+              description: Фактическое время прилета (местное время)
+        - name: bookings
+          description: Бронирования
+          columns:
+            - name: book_ref
+              description: Уникальный идентификатор бронирования
+            - name: book_date
+              description: Дата и время бронирования (UTC)
+            - name: total_amount
+              description: Общая сумма бронирования (включая налоги)
 
 
