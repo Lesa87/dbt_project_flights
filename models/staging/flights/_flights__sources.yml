@@ -1,0 +1,44 @@
+sources:
+    - name: demo_src
+      description: Данные из БЖ авиаперелетов
+      database: dwh_flights
+      schema: demo_src
+      tables:
+        - name: aircrafts
+          decription: Модели самолетов
+          columns:
+            - name: aircraft_code
+              description: Код модели самолета
+            - name: model
+              description: Модель самолета
+            - name: range
+              description: Дальность полета модели самолета в милях
+        - name: airports
+          description: Аэропорты
+          columns:
+            - name: airport_code
+              description: Код аэропорта
+            - name: airport_name
+              description: Название аэропорта
+            - name: city
+              description: Город, в котором расположен аэропорт
+            - name: state
+              description: Штат, в котором расположен аэропорт
+            - name: country
+              description: Страна, в которой расположен аэропорт
+            - name: latitude
+              description: Географическая широта аэропорта (десятичный формат)
+            - name: longitude
+              description: Географическая долгота аэропорта (десятичный формат)
+            - name: timezone
+              description: Часовой пояс аэропорта (относительно UTC)
+        - name: seats
+          description: Количество мест в самолете
+          columns:
+            - name: aircraft_code
+              description: Код модели самолета
+            - name: seats
+              description: Количество мест в самолете
+        
+
+
