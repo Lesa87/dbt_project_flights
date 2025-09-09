@@ -1,7 +1,6 @@
 {{ 
   config(
-    materialized = 'table',
-    tags = ['staging', 'flights']
+    materialized = 'table'
 ) }}
 select 
     book_ref,

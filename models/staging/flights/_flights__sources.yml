@@ -67,5 +67,41 @@ sources:
               description: Дата и время бронирования (UTC)
             - name: total_amount
               description: Общая сумма бронирования (включая налоги)
+        - name: boarding_passes
+          description: Посадочные талоны
+          columns:
+            - name: ticket_no
+              description: Номер билета пассажира
+            - name: flight_id
+              description: Уникальный идентификатор рейса
+            - name: boarding_no
+              description: Порядковый номер посадочного талона для данного рейса (1 = первый выданный талон)
+            - name: seat_no
+              description: Номер места пассажира на данном рейсе
+        - name: ticket_flights
+          description: Билеты на рейсы
+          columns:
+            - name: ticket_no
+              description: Номер билета пассажира
+            - name: flight_id
+              description: Уникальный идентификатор рейса
+            - name: fare_conditions
+              description: Условия тарифа (F = первый класс, C = бизнес-класс, Y = эконом-класс)
+            - name: amount
+              description: Количество
+        - name: tickets
+          description: Билеты пассажиров
+          columns:
+            - name: ticket_no
+              description: Номер билета пассажира
+            - name: book_ref
+              description: Уникальный идентификатор бронирования
+            - name: passenger_id
+              description: Уникальный идентификатор пассажира
+            - name: passenger_name
+              description: Имя пассажира (Фамилия/Имя)
+            - name: contact_data
+              description: Контактные данные пассажира (телефон, email) 
+              
 
 
